@@ -1,4 +1,4 @@
-// 🌌 星空エフェクト（流れ星＋マウス揺らぎ付き）
+// 星空エフェクト（流れ星＋マウス揺らぎ付き）
 const canvas = document.getElementById('stars');
 const ctx = canvas.getContext('2d');
 
