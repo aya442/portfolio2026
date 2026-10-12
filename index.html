@@ -4,49 +4,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>宮澤文香 | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 
 <body>
-    <html lang="ja">
+    <!-- ===== ナビゲーションバー ===== -->
+    <header class="header">
+        <div class="logo">Ayaka’s Portfolio</div>
+        <nav aria-label="メインナビゲーション">
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#dessin">DESSIN</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ayaka’s Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+    <!-- ===== 星空背景セクション ===== -->
+    <section id="home" class="hero-section">
+        <canvas id="stars"></canvas>
+        <div class="hero-text">
+            <p class="hero-role">利用者とITをつなぐエンジニアを目指す専門学校生</p>
+            <h1 class="hero-name">宮澤 文香</h1>
+            <p class="hero-summary">
+                利用者の声から課題を整理し、要件定義などの上流工程から、業務を支える仕組みづくりに携わりたいと考えています。
+            </p>
+            <a class="hero-cta" href="#projects">制作実績を見る <span aria-hidden="true">↓</span></a>
+        </div>
+    </section>
 
-    <body>
-        <!-- ===== ナビゲーションバー ===== -->
-        <header class="header">
-            <div class="logo">Ayaka’s Portfolio</div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#home">HOME</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#dessin">DESSIN</a></li>
-                    <li><a href="#skills">SKILLS</a></li>
-                    <li><a href="#projects">PROJECTS</a></li>
-                </ul>
-            </nav>
-        </header>
+    <section id="projects" class="projects-section">
+        <h1 class="title">PROJECTS</h1>
+        <div class="line"></div>
+        <p class="section-intro projects-intro">
+            課題に向き合って制作した作品と、担当したこと・得られた成果を紹介します。
+        </p>
 
-        <!-- ===== 星空背景セクション ===== -->
-        <section id="home" class="hero-section">
-            <canvas id="stars"></canvas>
-            <div class="hero-text">
-                <p class="hero-role">社内SEを目指す専門学校生</p>
-                <h1 class="hero-name">宮澤 文香</h1>
-                <p class="hero-summary">
-                    使いやすさと機能性を大切に、利用者を支えるWebアプリケーションづくりに取り組んでいます。
-                </p>
-            </div>
-        </section>
+        <div class="projects-grid">
+            <article class="project-card">
+                <div class="project-image" style="background-image: url('./project_img/venue-3.jpg');"></div>
+                <div class="project-info">
+                    <h2>LiveFx</h2>
+                    <p class="project-concept">
+                        スマートフォンをペンライトのように使い、ライブをより盛り上げるチーム開発プロジェクト。
+                    </p>
+                    <p class="project-desc">
+                        15人規模のプロジェクトに2期生として参加。担当した画面では、桜をスワイプすると桜の木に反映されるインタラクションを実装しました。
+                        また、会議の進め方を見直して所要時間を3時間から1時間に短縮。完成したシステムは、グループ校の入学者約4,000人を前に実演し、正常に動作しました。
+                    </p>
+                    <div class="project-tech">React / TypeScript / Vite / Express / WebSocket / Docker</div>
+                    <div class="project-links">
+                        <a href="https://github.com/SIWLiveFX/livefx-public" target="_blank" rel="noopener noreferrer">ソースコード（GitHub）</a>
+                        <a href="https://livefx.siw.ac.jp/" target="_blank" rel="noopener noreferrer">動作サイト</a>
+                    </div>
+                </div>
+            </article>
 
-        <section id="about" class="about-section">
+            <article class="project-card">
+                <div class="project-image" style="background-image: url('./project_img/FE QUIZ.png');"></div>
+                <div class="project-info">
+                    <h2>FE QUIZ</h2>
+                    <p class="project-concept">
+                        一人では続けにくい基本情報技術者試験の勉強を、友人やクラスメイトとの対戦で続けやすくするクイズアプリ。
+                    </p>
+                    <p class="project-desc">
+                        Firebaseを使ったリアルタイム対戦機能を担当しました。ルーム作成で参加人数に上限を設け、友人と合流しやすくしました。
+                        制作を通じて、よいアイデアを使いやすいアプリにするには、機能を整理して組み合わせることが大切だと学びました。
+                    </p>
+                    <div class="project-tech">HTML / React / Node.js / Vite / Firebase</div>
+                    <p class="project-status">公開デモ：なし</p>
+                    <div class="project-links">
+                        <a href="https://github.com/aya442/FE_QUIZ" target="_blank" rel="noopener noreferrer">ソースコード（GitHub）</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image" style="background-image: url('./project_img/zatu-todo.png');"></div>
+                <div class="project-info">
+                    <h2>zatu-TODO</h2>
+                    <p class="project-concept">
+                        メモ帳のような気軽さと、「今日やること」に集中できるシンプルさを組み合わせたTODOアプリ。
+                    </p>
+                    <p class="project-desc">
+                        個人で企画し、実装にはAIを活用しました。1行入力でのタスク追加、日付の自動判定、ドラッグ＆ドロップでの移動、複数端末でのデータ同期を制作。
+                        友人からはタスクをドラッグして日程変更できる機能が好評でした。今後はUIを改善したいと考えています。
+                    </p>
+                    <div class="project-tech">React / Vite / Firebase Authentication / Firestore / CSS</div>
+                    <p class="project-status">公開デモ：セキュリティ面を考慮して非公開</p>
+                    <div class="project-links">
+                        <a href="https://github.com/aya442/zatu-todo--" target="_blank" rel="noopener noreferrer">ソースコード（GitHub）</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image" style="background-image: url('./project_img/NapNap.png');"></div>
+                <div class="project-info">
+                    <h2>NapNap</h2>
+                    <p class="project-concept">
+                        生活習慣を変えたいと思いながら行動に移しにくい人を想定した、睡眠サポートアプリのデザイン。
+                    </p>
+                    <p class="project-desc">
+                        Figmaでペルソナを設定し、ブランドイメージを考えながらUI/UXを設計してプロトタイプを制作しました。
+                        UI/UXを詳しく学びながら取り組んだデザイン作品です。
+                    </p>
+                    <div class="project-tech">UI/UX Design / Figma</div>
+                    <div class="project-links">
+                        <a href="https://www.figma.com/design/RLvYldnAK5os5C5SbbwWl7/24010036_MobileApp?node-id=6001-58&amp;m=dev&amp;t=7cX0ADB5tTKtzpkD-1" target="_blank" rel="noopener noreferrer">デザインを見る</a>
+                        <a href="https://www.figma.com/proto/RLvYldnAK5os5C5SbbwWl7/24010036_MobileApp?node-id=6258-1056&amp;p=f&amp;t=blPGsX91EzXFl96v-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=6258%3A820&amp;starting-point-node-id=6258%3A1056" target="_blank" rel="noopener noreferrer">プロトタイプを試す</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
             <h1 class="title">ABOUT ME</h1>
             <div class="line"></div>
 
@@ -63,36 +139,81 @@
                     </div>
 
                     <div class="info-block">
-                        <h2>BIRTH</h2>
-                        <p>2002年3月18日生まれ</p>
+                        <h2>EDUCATION</h2>
+                        <p>
+                            さいたまIT・WEB専門学校<br>
+                            高度専門士情報技術科<br>
+                            2028年3月卒業見込み
+                        </p>
                     </div>
 
                     <div class="info-block">
-                        <h2>WANT TO</h2>
+                        <h2>CAREER GOAL</h2>
                         <p>
-                            使いやすさと機能性を兼ね備えた<br>
-                            プロダクトを制作したいです。
+                            社内SEやヘルプデスクとして利用者の困りごとに向き合うことに加え、課題を整理して要件に落とし込む要件定義などの上流工程にも関心があります。利用者と開発側をつなぎ、業務に合ったシステムの企画・改善に携わりたいです。
                         </p>
                     </div>
 
                     <div class="info-block">
                         <h2>EXPERIENCE</h2>
                         <p>
-                            美術予備校でデッサンや色彩を学び、<br>
-                            「表現すること」の基礎に触れました。<br><br>
-
-                            その後、専門学校でプログラミングを学び、<br>
-                            表現を形にする手段を広げています。<br><br>
-
-                            海外研修ではアメリカのIT企業を訪れ、<br>
-                            技術と文化の両面を体験しました。<br><br>
-
-                            入学式に向けたプロジェクトにて、<br>
-                            15人規模のチーム開発に取り組みました。<br><br>
+                            美術予備校でデッサンや色彩を学んだ後、専門学校でプログラミングを学んでいます。<br><br>
+                            15人規模のチーム開発では会議の進め方を見直し、3時間かかっていた会議を1時間に短縮しました。<br><br>
+                            海外研修ではアメリカのIT企業を訪問し、技術と文化に触れました。
                         </p>
                     </div>
 
                 </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <h1 class="title">SKILLS</h1>
+            <div class="line dark"></div>
+            <p class="section-intro skills-intro">
+                星による自己評価ではなく、作品や授業で扱った内容を記載しています。
+            </p>
+
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h2 class="skill-name">Webアプリ開発</h2>
+                    <p class="skill-tech">HTML / CSS / JavaScript / React / TypeScript / Node.js / Vite / Express</p>
+                    <p class="skill-evidence">FE QUIZ・zatu-TODO・LiveFxの制作で使用。LiveFxでは桜のスワイプ操作を桜の木に反映する画面を担当しました。</p>
+                </article>
+
+                <article class="skill-card">
+                    <h2 class="skill-name">Firebase</h2>
+                    <p class="skill-tech">Firebase / Authentication / Firestore</p>
+                    <p class="skill-evidence">FE QUIZのリアルタイム対戦機能とルーム作成、zatu-TODOの認証・データ同期に使用しました。</p>
+                </article>
+
+                <article class="skill-card">
+                    <h2 class="skill-name">リアルタイム通信・コンテナ</h2>
+                    <p class="skill-tech">WebSocket / Docker</p>
+                    <p class="skill-evidence">LiveFxのチーム開発プロジェクトで使用した技術です。</p>
+                </article>
+
+                <article class="skill-card">
+                    <h2 class="skill-name">Python / FastAPI</h2>
+                    <p class="skill-evidence">Pythonでゲームを制作し、二次元配列やクラスを扱いました。FastAPIは授業で使用しました。</p>
+                </article>
+
+                <article class="skill-card">
+                    <h2 class="skill-name">SQL / Linux / AWS</h2>
+                    <p class="skill-evidence">SQLはデータベース設計の授業で基本文法とインデックスを学習。Linux仮想環境でnginx・Apacheを使ったファイル公開、授業でMonacaとS3・Lambdaを扱いました。</p>
+                </article>
+
+                <article class="skill-card">
+                    <h2 class="skill-name">Git / GitHub</h2>
+                    <p class="skill-evidence">clone・merge・Pull Requestなど、GitHubを使った基本的な操作を行っています。</p>
+                </article>
+
+                <article class="skill-card">
+                    <h2 class="skill-name">UI/UXデザイン</h2>
+                    <p class="skill-tech">Figma</p>
+                    <p class="skill-evidence">NapNapのデザインでペルソナを設定し、ブランドイメージを考えながらプロトタイプを制作しました。</p>
+                </article>
+
             </div>
         </section>
 
@@ -134,164 +255,12 @@
             </div>
         </section>
 
-        <section id="skills" class="skills-section">
-            <h1 class="title">SKILLS</h1>
-            <div class="line dark"></div>
-            <p class="section-intro skills-intro">
-                表現したいことを形にするために学んできた技術です。
-            </p>
-
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="stars">★ ★ ★ ☆ ☆</div>
-                    <div class="skill-name"><span>⟨⟩</span> HTML</div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="stars">★ ★ ★ ☆ ☆</div>
-                    <div class="skill-name"><span>⟨⟩</span> CSS</div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="stars">★ ★ ☆ ☆ ☆</div>
-                    <div class="skill-name"><span>⟨⟩</span> JavaScript</div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="stars">★ ★ ★ ★ ☆</div>
-                    <div class="skill-name"><span>⟨⟩</span> Python</div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="stars">★ ★ ★ ☆ ☆</div>
-                    <div class="skill-name"><span>⟨⟩</span> SQL</div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="stars">★ ★ ★ ★ ☆</div>
-                    <div class="skill-name"><span>⟨⟩</span> Linux</div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="stars">★ ★ ☆ ☆ ☆</div>
-                    <div class="skill-name"><span>⟨⟩</span> AWS</div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="stars">★ ★ ★ ☆ ☆</div>
-                    <div class="skill-name"><span>⟨⟩</span> Git</div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="stars">★ ★ ☆ ☆ ☆</div>
-                    <div class="skill-name"><span>⟨⟩</span> FastAPI</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="projects-section">
-            <h1 class="title">PROJECTS</h1>
-            <div class="line"></div>
-            <p class="section-intro projects-intro">
-                アイデアを使う人の体験へつなげた制作物です。
-            </p>
-
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('./project_img/FE QUIZ.png');"></div>
-
-                    <div class="project-info">
-                        <h2>FE QUIZ</h2>
-                        <p class="project-concept">
-                            基本情報技術者試験の知識を問うクイズアプリ。
-                        </p>
-                        <p class="project-desc">
-                            Firebaseを使用して、他ユーザーと早押し対戦ができる機能を実装しました。
-                        </p>
-                        <div class="project-tech">HTML / React / node.js / vite / Firebase</div>
-
-                        <div class="project-links">
-                            <a href="https://github.com/aya442/FE_QUIZ" target="_blank">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('./project_img/zatu-todo.png');"></div>
-
-                    <div class="project-info">
-                        <h2>zatu-TODO</h2>
-                        <p class="project-concept">
-                            タスク管理ツール自体の作成にかかる手間を削減するアプリ。
-                        </p>
-                        <p class="project-desc">
-                            1行でタスクを入力するだけで追加でき、日付の自動判定やドラッグ操作でのタスク移動が可能。Firebase Authentication と Firestore
-                            を使用して複数端末でのデータ同期とダークテーマ対応を実装しました。
-                        </p>
-                        <div class="project-tech">React 19 / Vite 8 / Firebase (Authentication + Firestore) / CSS /
-                            ESLint</div>
-
-                        <div class="project-links">
-                            <a href="https://github.com/aya442/zatu-todo--" target="_blank">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('./project_img/NapNap.png');"></div>
-
-                    <div class="project-info">
-                        <h2>NapNap</h2>
-                        <p class="project-concept">
-                            生活習慣を変えたいと思いながらも、行動に移すことができない人のための睡眠サポートアプリ。
-                        </p>
-                        <p class="project-desc">
-                            ユーザーの睡眠習慣改善を支援するモバイルアプリのUI/UXデザイン。行動変容を促すための直感的なインターフェースとユーザーフレンドリーな操作性を重視し、プロトタイプを設計しました。
-                        </p>
-                        <div class="project-tech">UI / UX Design / Figma</div>
-
-                        <div class="project-links">
-                            <a href="https://www.figma.com/design/RLvYldnAK5os5C5SbbwWl7/24010036_MobileApp?node-id=6001-58&m=dev&t=7cX0ADB5tTKtzpkD-1" target="_blank">idea</a>
-                            <a href="https://www.figma.com/proto/RLvYldnAK5os5C5SbbwWl7/24010036_MobileApp?node-id=6258-1056&p=f&t=blPGsX91EzXFl96v-1&scaling=scale-down&content-scaling=fixed&page-id=6258%3A820&starting-point-node-id=6258%3A1056" target="_blank">Prototype</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('./project_img/venue-3.jpg');"></div>
-
-                    <div class="project-info">
-                        <h2>LiveFx</h2>
-                        <p class="project-concept">
-                            ライブパフォーマンス向けの双方向インタラクティブシステム。
-                        </p>
-                        <p class="project-desc">
-                            コントロールPCからの操作をスマートフォンへリアルタイムに届け、ライブ演出を複数の画面で同期させるチーム開発プロジェクトです。
-                            フロントエンドの実装を担当し、WebSocketを使ったリアルタイム通信やReactによる画面づくりに取り組みました。
-                        </p>
-                        <div class="project-tech">React / TypeScript / Vite / Express / WebSocket / Docker</div>
-
-                        <div class="project-links">
-                            <a href="https://github.com/SIWLiveFX/livefx-public" target="_blank" rel="noopener noreferrer">GitHub</a>
-                            <a href="https://livefx.siw.ac.jp/" target="_blank" rel="noopener noreferrer">Live site</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <footer class="footer">
-            <h1 class="footer-title">CONTACT</h1>
-            <div class="social-icons">
-                <a href="https://github.com/aya442" target="_blank" class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" viewBox="0 0 24 24">
-                        <path d="M12 .5C5.648.5.5 5.648.5 12c0 5.087 3.292 9.396 7.862 10.91.574.107.785-.25.785-.557 
+    <footer class="footer">
+        <h1 class="footer-title">CONTACT</h1>
+        <div class="social-icons">
+            <a href="https://github.com/aya442" target="_blank" rel="noopener noreferrer" class="icon" aria-label="GitHubプロフィール">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" viewBox="0 0 24 24">
+                    <path d="M12 .5C5.648.5.5 5.648.5 12c0 5.087 3.292 9.396 7.862 10.91.574.107.785-.25.785-.557
                  0-.275-.01-1.004-.016-1.972-3.2.697-3.878-1.543-3.878-1.543-.523-1.327-1.277-1.68-1.277-1.68
                  -1.044-.714.079-.699.079-.699 1.154.081 1.761 1.185 1.761 1.185 
                  1.027 1.759 2.694 1.252 3.351.959.104-.745.402-1.253.732-1.54
@@ -303,11 +272,11 @@
                  0 4.416-2.689 5.387-5.253 5.672.414.36.781 1.08.781 2.177 
                  0 1.572-.015 2.839-.015 3.227 0 .309.208.67.791.555C20.71 
                  21.392 24 17.084 24 12 24 5.648 18.852.5 12 .5z" />
-                    </svg>
-                </a>
-                <div class="footer-copy">©2026/09 Miyazawa Ayaka</div>
-        </footer>
-        <script src="stars.js"></script>
-    </body>
-
-    </html>
+                </svg>
+            </a>
+        </div>
+        <div class="footer-copy">©2026 Miyazawa Ayaka</div>
+    </footer>
+    <script src="stars.js"></script>
+</body>
+</html>

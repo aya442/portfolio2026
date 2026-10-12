@@ -104,6 +104,25 @@ body {
   line-height: 1.9;
 }
 
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+  padding: 12px 20px;
+  border: 1px solid #c6c48c;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.hero-cta:hover {
+  background-color: #c6c48c;
+  color: #211a2b;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -243,10 +262,10 @@ body {
 /* スキルカードのレイアウト */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-  width: 80%;
-  max-width: 1000px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 24px;
+  width: 85%;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -254,7 +273,8 @@ body {
 .skill-card {
   background-color: #c3c39a;
   border-radius: 10px;
-  padding: 25px 0;
+  padding: 24px;
+  text-align: left;
   box-shadow: 0 4px 10px rgba(40, 40, 20, 0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -264,28 +284,27 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* スター部分 */
-.stars {
-  color: #fff;
-  font-size: 22px;
-  letter-spacing: 4px;
-  margin-bottom: 15px;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
-}
-
 /* スキル名 */
 .skill-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  font-style: italic;
+  margin: 0 0 12px;
+  font-size: 19px;
+  line-height: 1.5;
   color: #2c2c2c;
 }
 
-.skill-name span {
-  font-style: normal;
-  margin-right: 6px;
-  color: #3a3a3a;
-  font-weight: bold;
+.skill-tech {
+  margin: 0 0 12px;
+  color: #2c2c2c;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+.skill-evidence {
+  margin: 0;
+  color: #3f3d2f;
+  font-size: 14px;
+  line-height: 1.8;
 }
 
 /* ===== PROJECTS SECTION ===== */
@@ -293,6 +312,7 @@ body {
   background-color: #211a2b;
   text-align: center;
   padding: 100px 0;
+  scroll-margin-top: 80px;
 }
 
 .projects-section .title {
@@ -324,11 +344,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 50px;
-}
-
-/* プロジェクトグリッド間の間隔 */
-.projects-grid + .projects-grid {
-  margin-top: 80px;
 }
 
 /* 各プロジェクトカード */
@@ -398,6 +413,13 @@ body {
   border-radius: 999px;
   margin-bottom: 20px;
   width: fit-content;
+}
+
+.project-status {
+  margin: 0 0 18px;
+  color: #d9d5e0;
+  font-size: 13px;
+  line-height: 1.6;
 }
 
 .project-links {
@@ -622,5 +644,31 @@ body {
     grid-column: 1 / -1;
     width: 72%;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 5vw;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .header nav {
+    width: 100%;
+  }
+
+  .nav-links {
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .nav-links li a {
+    font-size: 12px;
   }
 }
