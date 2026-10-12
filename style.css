@@ -72,12 +72,36 @@ body {
 /* ===== テキスト ===== */
 .hero-text {
   position: absolute;
-  bottom: 80px;
-  right: 40px;
-  color: #ddd;
-  font-size: 18px;
-  text-align: right;
-  font-weight: 400;
+  top: calc(50% + 32px);
+  left: clamp(24px, 10vw, 160px);
+  right: 24px;
+  z-index: 1;
+  max-width: 680px;
+  color: #fff;
+  text-align: left;
+  transform: translateY(-50%);
+}
+
+.hero-role {
+  margin: 0 0 12px;
+  color: #d5d2a2;
+  font-size: clamp(16px, 2vw, 20px);
+  letter-spacing: 0.08em;
+}
+
+.hero-name {
+  margin: 0;
+  font-size: clamp(42px, 8vw, 76px);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.hero-summary {
+  max-width: 620px;
+  margin: 24px 0 0;
+  color: #e4e1e8;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.9;
 }
 
 body {
