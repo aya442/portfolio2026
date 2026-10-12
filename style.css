@@ -93,7 +93,6 @@ body {
 
 .hero-name {
   margin: 0;
-  font-size: clamp(42px, 8vw, 76px);
   font-weight: 500;
   line-height: 1.2;
 }
