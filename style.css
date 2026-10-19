@@ -133,14 +133,6 @@ body {
   color: #211a2b;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #211a2b;
-  color: #ffffff;
-  font-family: system-ui, sans-serif;
-}
-
 .about-section {
   text-align: center;
   padding: 80px 0;
@@ -216,13 +208,6 @@ body {
   letter-spacing: 1px;
   color: #cfcfcf;
   margin-top: 4px;
-}
-
-.certification-list {
-  margin: 0;
-  padding-left: 1.25em;
-  font-size: 15px;
-  line-height: 1.9;
 }
 
 /* レスポンシブ対応 */
